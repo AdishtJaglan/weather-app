@@ -28,5 +28,7 @@ export function getCityName() {
     e.preventDefault();
 
     getWeather(cityName.value);
+
+    cityName.value = "";
   });
 }
