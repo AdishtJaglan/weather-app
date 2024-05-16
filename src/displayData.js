@@ -1,20 +1,17 @@
 export function displayData(
   feelsLike,
   location,
-  weatherIcon,
-  tempreture,
-  tempretureFeelsLike
+  temperature,
+  temperatureFeelsLike
 ) {
   const display = document.querySelector(".weather-data");
-  const icon = new Image();
-  icon.src = weatherIcon;
 
   display.innerHTML = `
-    <p>${feelsLike}</p>
-    <p>${location}</p>
-    <p>${tempreture}</p>
-    <p>${tempretureFeelsLike}</p>
+    <div class="weather-card">
+    <p class="temperature"><span>${temperature}°C</span></p>
+    <p class="location"><span>${location}</span></p>
+      <p class="feels-like">Feels Like: <span>${temperatureFeelsLike}°C</span></p>
+      <p class="feels-like"><span>${feelsLike}</span></p>
+    </div>
   `;
-
-  display.append(icon);
 }

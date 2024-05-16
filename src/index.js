@@ -1,7 +1,7 @@
 import "./style.css";
-import { getCityName } from "./weatherData";
+import { getCityName, getWeather } from "./weatherData";
 import { setBgImg } from "./setBackground";
 
-console.log("connected");
+getWeather("new delhi"); //for default display
 setBgImg();
 getCityName();
